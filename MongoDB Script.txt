@@ -1,0 +1,63 @@
+db.productsKPIanalysis.find({
+	$or:[
+		{$and:[{productName: {$regex: /Ford/}},{priceEach: {$gte: "162"}}]},
+		{$and:[{productName: {$regex: /Mercedes/}},{priceEach: {$gte: "168"}}]}
+	]
+})
+
+db.Payments.aggregate([
+	{
+	$lookup:
+		{
+		from: "Customers",
+		localField: "customerNumber",
+		foreignField: "customerNumber",
+		
+		as: "customer_info"
+		}
+	}
+])
+
+
+
+
+
+
+
+
+
+
+/*
+	This script finds the documents that meet the following condition: 
+	 Find the document where the productName contains the word Ford and it has a priceEach that's greater than or equal to 162, 
+	 or Find the document where the productName contains the word Mercedes and it has a priceEach that's greater than or equal to 168.
+	
+	This specific script will return only 2 documents, that are Ford documents as there are no documents that have a Mercedes with a priceEach that's
+	greater than or equal to 168. 
+*/
+
+db.finalproject.find({
+	$or:[
+		{$and:[{productName: {$regex: /Ford/}},{priceEach: {$gte: "162"}}]},
+		{$and:[{productName: {$regex: /Mercedes/}},{priceEach: {$gte: "168"}}]}
+	]
+})
+
+
+/*
+	This script creates a JOIN between the finalproject collection and the Customers collection. The result will output
+	the relation of each document from the finalproject collection with the information of its related Customer. 
+*/
+
+db.finalproject.aggregate([	
+	{
+	$lookup:
+		{
+			from: "Customers",
+			localField: "customerNumber",
+			foreignField: "customerNumber",
+			as: "testing"
+		}
+	}
+])
+

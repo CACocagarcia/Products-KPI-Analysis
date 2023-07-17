@@ -1,0 +1,58 @@
+SELECT c.customerName, od.orderNumber, o.orderDate, p.productName, od.quantityOrdered, od.priceEach, (od.quantityOrdered * od.priceEach) AS Total_Cost
+FROM b_vargas.customers c
+	INNER JOIN b_vargas.orders o ON c.customerNUmber = o.customerNumber
+	INNER JOIN b_vargas.orderdetails od ON o.orderNumber = od.orderNumber
+	INNER JOIN b_vargas.products p ON od.productCode = p.productCode
+WHERE quantityOrdered >= 50 AND (od.quantityOrdered * od.priceEach) >= 7500
+ORDER BY (od.quantityOrdered * od.priceEach) DESC
+
+
+
+CREATE DEFINER=`usuariodos`@`%` PROCEDURE `ccoca_productsKPI`(IN qord int, ttc int)
+BEGIN
+    DECLARE v1 INT;
+    DECLARE v2 INT;
+    SET v1 = qord; 
+    SET v2 = ttc; 
+    
+    CREATE TABLE ccocaProductsKPI AS (
+		SELECT c.customerName, od.orderNumber, o.orderDate, p.productName, od.quantityOrdered, od.priceEach, (od.quantityOrdered * od.priceEach) AS Total_Cost
+		FROM b_vargas.customers c
+			INNER JOIN b_vargas.orders o ON c.customerNUmber = o.customerNumber
+			INNER JOIN b_vargas.orderdetails od ON o.orderNumber = od.orderNumber
+			INNER JOIN b_vargas.products p ON od.productCode = p.productCode
+		WHERE quantityOrdered >= qord AND (od.quantityOrdered * od.priceEach) >= ttc
+		ORDER BY (od.quantityOrdered * od.priceEach) DESC ); 
+END
+
+
+
+USE `b_vargas`;
+DROP procedure IF EXISTS `ccoca_productsKPI`;
+
+USE `b_vargas`;
+DROP procedure IF EXISTS `b_vargas`.`ccoca_productsKPI`;
+;
+
+DELIMITER $$
+USE `b_vargas`$$
+CREATE DEFINER=`usuariodos`@`%` PROCEDURE `ccoca_productsKPI`(IN qord int, ttc int)
+BEGIN
+    DECLARE v1 INT;
+    DECLARE v2 INT;
+    SET v1 = qord; 
+    SET v2 = ttc; 
+    
+    CREATE TABLE ccocaProductsKPI AS (
+		SELECT c.customerName, od.orderNumber, o.orderDate, p.productName, od.quantityOrdered, od.priceEach, (od.quantityOrdered * od.priceEach) AS Total_Cost
+		FROM b_vargas.customers c
+			INNER JOIN b_vargas.orders o ON c.customerNUmber = o.customerNumber
+			INNER JOIN b_vargas.orderdetails od ON o.orderNumber = od.orderNumber
+			INNER JOIN b_vargas.products p ON od.productCode = p.productCode
+		WHERE quantityOrdered >= qord AND (od.quantityOrdered * od.priceEach) >= ttc
+		ORDER BY (od.quantityOrdered * od.priceEach) DESC ); 
+END$$
+
+DELIMITER ;
+;
+

@@ -1,0 +1,23 @@
+customerNumber,customerName,orderNumber,orderDate,productName,quantityOrdered,priceEach,Total_Cost
+201,"UK Collectables, Ltd.",10403,2005-04-08,"2003 Harley-Davidson Eagle Drag Bike",66,174.29,11503.14
+209,"Mini Caravy",10405,2005-04-14,"1969 Dodge Charger",97,115.16,11170.52
+450,"The Sharp Gifts Warehouse",10407,2005-04-22,"1917 Grand Touring Sedan",76,141.10,10723.60
+323,"Down Under Souveniers, Inc",10404,2005-04-08,"1968 Ford Mustang",64,163.44,10460.16
+141,"Euro+ Shopping Channel",10424,2005-05-31,"1952 Alpine Renault 1300",50,201.44,10072.00
+209,"Mini Caravy",10405,2005-04-14,"1956 Porsche 356A Coupe",76,127.79,9712.04
+141,"Euro+ Shopping Channel",10412,2005-05-03,"1992 Ferrari 360 Spider red",60,157.49,9449.40
+204,"Online Mini Collectables",10276,2004-08-02,"1968 Ford Mustang",50,184.84,9242.00
+141,"Euro+ Shopping Channel",10417,2005-05-13,"2003 Harley-Davidson Eagle Drag Bike",56,162.67,9109.52
+450,"The Sharp Gifts Warehouse",10400,2005-04-01,"1972 Alfa Romeo GTA",64,134.64,8616.96
+328,"Tekni Collectables Inc.",10401,2005-04-03,"America West Airlines B757-200",85,98.72,8391.20
+458,"Corrida Auto Replicas, Ltd",10214,2004-01-26,"1928 Mercedes-Benz SSK",50,167.06,8353.00
+357,GiftsForHim.com,10410,2005-04-29,"1928 Mercedes-Benz SSK",56,145.13,8127.28
+209,"Mini Caravy",10405,2005-04-14,"1992 Ferrari 360 Spider red",55,147.33,8103.15
+201,"UK Collectables, Ltd.",10403,2005-04-08,"2002 Suzuki XREO",66,122.00,8052.00
+386,"L'ordine Souveniers",10176,2003-11-06,"1969 Ford Falcon",50,160.91,8045.50
+382,"Salzburg Collectables",10419,2005-05-17,"1956 Porsche 356A Coupe",70,112.34,7863.80
+141,"Euro+ Shopping Channel",10412,2005-05-03,"1962 Volkswagen Microbus",70,109.90,7693.00
+145,"Danish Wholesale Imports",10406,2005-04-15,"1948 Porsche Type 356 Roadster",65,117.26,7621.90
+145,"Danish Wholesale Imports",10406,2005-04-15,"1993 Mazda RX-7",61,124.56,7598.16
+319,"Mini Classics",10195,2003-11-25,"1992 Ferrari 360 Spider red",50,150.71,7535.50
+114,"Australian Collectors, Co.",10342,2004-11-24,"1976 Ford Gran Torino",55,136.70,7518.50
